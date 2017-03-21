@@ -3,6 +3,9 @@ source 'https://rubygems.org'
 gem 'rails', '~> 5.0.2'
 gem 'sqlite3'
 gem 'puma', '~> 3.0'
+gem 'tzinfo-data'
+gem 'rubocop'
+gem 'annotate'
 
 group :development, :test do
   gem 'byebug', platform: :mri
