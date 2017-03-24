@@ -7,9 +7,12 @@ class Intercommunality < ApplicationRecord
   
   attribute :slug, :string
   
-  after_save { self.slug = self.name.parameterize if self.slug==nil }
+  after_save { self.slug = self.name.parameterize if (self.slug==nil && self.name!=nil) }
   
   def communes_hash
     self.communes.map{ |c| [c.code_insee,c.name] }.to_h
+  end
+  def population
+    self.communes.sum(:population)
   end
 end

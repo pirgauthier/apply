@@ -6,19 +6,16 @@ class DbCreation < ActiveRecord::Migration[5.0]
       t.string  "code_insee"
       t.index ["intercommunality_id"], name: "index_communes_on_intercommunality_id"
     end
-
     create_table "intercommunalities" do |t|
       t.string "name"
       t.string "siren"
-	  t.string "form"
+      t.string "form"
     end
-
     create_table "streets" do |t|
       t.string  "title"
       t.integer "from"
       t.integer "to"
     end
-	
     create_table "commune_streets", id: false do |t|
       t.integer "communes_id"
       t.integer "streets_id"
