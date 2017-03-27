@@ -1,11 +1,11 @@
 source 'https://rubygems.org'
 
-gem 'rails', '~> 5.0.2'
-gem 'sqlite3'
-gem 'puma', '~> 3.0'
-gem 'tzinfo-data'
-gem 'rubocop'
 gem 'annotate'
+gem 'puma', '~> 3.0'
+gem 'rails', '~> 5.0.2'
+gem 'rubocop'
+gem 'sqlite3'
+gem 'tzinfo-data'
 
 group :development, :test do
   gem 'byebug', platform: :mri
@@ -13,11 +13,11 @@ group :development, :test do
 end
 
 group :development do
-  gem 'web-console', '>= 3.3.0'
   gem 'listen', '~> 3.0.5'
   gem 'spring'
-  gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'spring-commands-rspec'
+  gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'web-console', '>= 3.3.0'
 end
 
 group :test do
